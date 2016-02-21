@@ -31,11 +31,11 @@ dpkg-reconfigure tzdata
 
 # Add new user and put this user to sudoers.d
 adduser $1
-echo $SUDOERS'>> /etc/sudoers.d/$1
+echo $SUDOERS >> /etc/sudoers.d/$1
 chmod 440 /etc/sudoers.d/$1
 
 # Deny user root for ssh login
-sed -i '/s/PermitRootLogin yes/PermitRootLogin no/g' /etc/ssh/sshd_config
+sed -i 's/PermitRootLogin yes/PermitRootLogin no/g' /etc/ssh/sshd_config
 
 # Restart SSH service
 service ssh restart
