@@ -25,5 +25,7 @@ server {
 }
 " | sudo tee /etc/nginx/sites-available/letsencrypt > /dev/null
 
+sudo mkdir -p /var/www/letsencrypt/letsencrypt-auth/.well-known/acme-challenge
 sudo ln -s /etc/nginx/sites-available/letsencrypt /etc/nginx/sites-enabled/001-letsencrypt
+
 sudo nginx -t
