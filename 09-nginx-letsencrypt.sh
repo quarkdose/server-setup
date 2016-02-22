@@ -30,3 +30,5 @@ sudo mkdir -p /var/www/letsencrypt/letsencrypt-auth/.well-known/acme-challenge
 sudo ln -s /etc/nginx/sites-available/letsencrypt /etc/nginx/sites-enabled/001-letsencrypt
 
 sudo nginx -t
+
+echo "\nIf nginx syntax is ok, don´t forget to perform sudo service nginx restart"
