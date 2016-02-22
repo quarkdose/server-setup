@@ -22,8 +22,7 @@ sudo mkdir /etc/nginx/{sites-available,sites-enabled}
 sudo rm /etc/nginx/conf.d/default.conf
 sudo rm /etc/nginx/nginx.conf
 
-echo "
-user			www-data;
+echo "user			www-data;
 worker_processes	4;
 
 error_log		/var/log/nginx/error.log warn;
@@ -57,18 +56,15 @@ http {
 	gzip_disable		\"msie6\";
 
 	include			/etc/nginx/sites-enabled/*;
-}
-" | sudo tee /etc/nginx/nginx.conf > /dev/null
+}" | sudo tee /etc/nginx/nginx.conf > /dev/null
 
-echo "
-server {
+echo "server {
         listen          80      default_server;
         listen          [::]:80 default_server;
         server_name     _;
         server_tokens   off;
         return          301     https://\$host\$request_uri;
-}
-" | sudo tee /etc/nginx/sites-available/default > /dev/null
+}" | sudo tee /etc/nginx/sites-available/default > /dev/null
 
 sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/000-ssl
 sudo nginx -t
