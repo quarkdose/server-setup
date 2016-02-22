@@ -24,7 +24,7 @@ echo '         \/                 \/               \/     \/           |__|    '
 
 # Perform system update and upgrade and install ntp
 apt-get update && apt-get upgrade -y && apt-get dist-upgrade -y
-apt-get install ntp -y
+apt-get install ntp sudo -y
 
 # Configure timezone
 dpkg-reconfigure tzdata
