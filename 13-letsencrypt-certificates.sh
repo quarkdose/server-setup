@@ -56,7 +56,7 @@ if [[ -z "$11" ]]
         filename="mail"
         else
         foldername=$8
-        filename=$11
+        filename=${11}
 fi
 
 echo '.____           __ /\        ___________                                   __                 ________      _____    _______  ___________'
