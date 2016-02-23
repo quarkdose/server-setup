@@ -24,11 +24,11 @@ echo "server {
 	server_name		letsencrypt-auth.$1;
 	root			/var/www/letsencrypt/letsencrypt-auth;
 	default_type		text/plain;
-}" | sudo tee /etc/nginx/sites-available/letsencrypt > /dev/null
+}" | sudo tee /etc/nginx/sites-available/letsencrypt.$1 > /dev/null
 
 sudo mkdir -p /var/www/letsencrypt/letsencrypt-auth/.well-known/acme-challenge
 sudo chown -R www-data:www-data /var/www/letsencrypt
-sudo ln -s /etc/nginx/sites-available/letsencrypt /etc/nginx/sites-enabled/001-letsencrypt
+sudo ln -s /etc/nginx/sites-available/letsencrypt.$1 /etc/nginx/sites-enabled/001-letsencrypt.$1
 
 sudo nginx -t
 
