@@ -17,6 +17,7 @@ sudo usermod -aG docker $USER
 
 mkdir ~/docker
 
+# disable dockers default iptables behavior, I will use ufw!
 sudo sed -i 's/#DOCKER_OPTS="--dns 8.8.8.8 --dns 8.8.4.4/DOCKER_OPTS="--dns 8.8.8.8 --dns 8.8.4.4 --iptables=false"/g' /etc/default/docker
 
 echo "To use the docker command as unprivileged user you have to relogin"
