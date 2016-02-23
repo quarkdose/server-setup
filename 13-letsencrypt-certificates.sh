@@ -50,6 +50,15 @@ if [[ -z "$10" ]]
         exit
 fi
 
+if [[ -z "$11" ]]
+        then
+        foldername="mail"
+        filename="mail"
+        else
+        foldername=$8
+        filename=$11
+fi
+
 echo '.____           __ /\        ___________                                   __                 ________      _____    _______  ___________'
 echo '|    |    _____/  |)/ ______ \_   _____/ ____   ___________ ___.__._______/  |_      .__      \______ \    /  _  \   \      \ \_   _____/'
 echo '|    |  _/ __ \   __\/  ___/  |    __)_ /    \_/ ___\_  __ <   |  |\____ \   __\   __|  |___   |    |  \  /  /_\  \  /   |   \ |    __)_ '
@@ -57,8 +66,8 @@ echo '|    |__\  ___/|  |  \___ \   |        \   |  \  \___|  | \/\___  ||  |_> 
 echo '|_______ \___  >__| /____  > /_______  /___|  /\___  >__|   / ____||   __/|__|       |__|     /_______  /\____|__  /\____|__  /_______  /'
 echo '        \/   \/          \/          \/     \/     \/       \/     |__|                               \/         \/         \/        \/ '
 
-mkdir -p ~/build/dane
-cd ~/build/dane
+mkdir -p ~/build/dane/$8
+cd ~/build/dane/$8
 
 echo "[ req ]
 default_md = sha512
@@ -79,15 +88,19 @@ commonName = \"$8\"
 emailAddress = \"$9\"
 
 [ v3_req ]
-subjectAltName = ${10}" | tee ~/build/dane/request.cnf > /dev/null
+subjectAltName = ${10}" | tee ~/build/dane/$8/request.cnf > /dev/null
 
 openssl genrsa -out privkey.pem 4096
 openssl req -config request.cnf -new -key privkey.pem -out request.csr -outform der
 
 letsencrypt certonly --webroot -w /var/www/letsencrypt/letsencrypt-auth --key-path privkey.pem --cert-path cert.pem --fullchain-path fullchain.pem --csr request.csr
 
-sudo ln -s ~/build/dane/0000_fullchain.pem /etc/ssl/mail/mail.crt
-sudo ln -s ~/build/dane/privkey.pem /etc/ssl/mail/mail.key
+if [[ ! -d "/etc/ssl/$foldername" ]]
+        then sudo mkdir /etc/ssl/$foldername
+fi
+
+sudo ln -s ~/build/dane/$8/0000_fullchain.pem /etc/ssl/$foldername/$filename.crt
+sudo ln -s ~/build/dane/$8/privkey.pem /etc/ssl/$foldername/$filename.key
 
 sudo service nginx restart
 sudo service postfix restart
