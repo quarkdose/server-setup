@@ -16,3 +16,5 @@ curl -fsSL https://get.docker.com/ | sh
 sudo usermod -aG docker $USER
 
 mkdir ~/docker
+
+echo "To use the docker command as unprivileged user you have to relogin"
