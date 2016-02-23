@@ -8,7 +8,7 @@
  echo '        \/             /_____/           \/          \/                 \/     \/     \/             \/     \/                   '
 
 sudo apt-get install libpam-google-authenticator -y
-sudo sed -i 's/# PAM configuration for the Secure Shell service/# PAM configuration for the Secure Shell service\n\n#Activate google authenticator\nauth [success=ok new_authtok_reqd=done default=die] pam_google_authenticator.so nullok/g' /etc/pam.d/sshd
+sudo sed -i '/# PAM configuration for the Secure Shell service/a \\n\\n#Activate google authenticator\nauth [success=ok new_authtok_reqd=done default=die] pam_google_authenticator.so nullok' /etc/pam.d/sshd
 sudo sed -i 's/ChallengeResponseAuthentication no/ChallengeResponseAuthentication yes/g' /etc/ssh/sshd_config
 sudo service ssh restart
 google-authenticator
