@@ -17,4 +17,4 @@ sudo ln -s /etc/nginx/sites-available/mailcow /etc/nginx/sites-enabled/003-mailc
 
 sudo nginx -t
 
-echo "\nIf nginx syntax is ok, don´t forget to perform sudo service nginx restart"
+echo "If nginx syntax is ok, don´t forget to perform sudo service nginx restart"
