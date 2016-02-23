@@ -88,3 +88,7 @@ letsencrypt certonly --webroot -w /var/www/letsencrypt/letsencrypt-auth --key-pa
 
 sudo ln -s ~/build/dane/0000_fullchain.pem /etc/ssl/mail/mail.crt
 sudo ln -s ~/build/dane/privkey.pem /etc/ssl/mail/mail.key
+
+sudo service nginx restart
+sudo service postfix restart
+sudo service dovecot restart
