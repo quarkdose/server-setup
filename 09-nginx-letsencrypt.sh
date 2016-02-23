@@ -32,4 +32,4 @@ sudo ln -s /etc/nginx/sites-available/letsencrypt /etc/nginx/sites-enabled/001-l
 
 sudo nginx -t
 
-echo "\nIf nginx syntax is ok, don´t forget to perform sudo service nginx restart"
+echo "If nginx syntax is ok, don´t forget to perform sudo service nginx restart"
