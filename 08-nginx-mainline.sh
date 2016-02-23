@@ -69,4 +69,4 @@ echo "server {
 sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/000-ssl
 sudo nginx -t
 
-echo "\nIf nginx syntax is ok, don´t forget to perform sudo service nginx restart"
+echo "If nginx syntax is ok, don´t forget to perform sudo service nginx restart"
