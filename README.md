@@ -21,7 +21,8 @@ Here is my collection of setup scripts for my Ubuntu server.
   15.  [Rainloop](#15---rainloop)
   16.  [Docker Remote API](#16---docker-remote-api)
   17.  [Fail2Ban and ufw](#17---fail2ban-and-ufw)
-  18.  [Firewall Settings](#xx---firewall-settings)
+  18.  [ServerCow Storage](#18---servercow-storage)
+  19.  [Firewall Settings](#xx---firewall-settings)
 2.  [Miscellaneous](#miscellaneous)
 
 ## Usage
@@ -211,6 +212,21 @@ This script changes the fail2ban behavior to use ufw. This script exemplary adds
 ```bash
 ./17-fail2ban.sh
 ```
+
+### 18 - ServerCow Storage
+This script installs the ServerCow storage as cifs to /samba_share
+
+#### Usage
+```bash
+./18-servercow-storage.sh <username> <password> [ASUSER]
+```
+
+##### Mandatory Parameters
+**&lt;username&gt;** - Your ServerCow storage username - see ServerCow ControlPanel  
+**&lt;password&gt;** - Your ServerCow storage password - see ServerCow ControlPanel
+
+##### Optional Parameters
+**ASUSER** - If this parameter is set, the share will be mounted as user $(whoami).
 
 ### XX - Firewall Settings
 This script prepares the ufw for some ports and changes the defaults for incoming (deny) and outgoing (allow).
