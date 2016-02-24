@@ -156,24 +156,15 @@ This script creates a Let's Encrypt certificate usable for DANE. The script crea
 ```
 
 ##### Mandatory Parameters
-**&lt;countryName&gt;** - Needed for signing request, your country (e.g. DE)
-
-**&lt;stateOrProvince&gt;** - Needed for signing request, your state (e.g. Hessen)
-
-**&lt;localityName&gt;** - Needed for signing request, your city (e.g. Limburg)
-
-**&lt;postalCode&gt;** - Needed for signing request, your postal code (e.g 65xxx)
-
-**&lt;streetAddress&gt;** - Needed for signing request, your street address (e.g. "xxx xxx")
-
-**&lt;organizationName&gt;** - Needed for signing request, your name (e.g. "Jens Hartlep")
-
-**&lt;organizationalUnitName&gt;** - Needed for signing request, your OUName (e.g. IT)
-
-**&lt;commonName&gt;** - Needed for signing request, your domain.tld (e.g. example.com)
-
-**&lt;emailAddress&gt;** - Needed for signing request, your email address (e.g. admin@example.com)
-
+**&lt;countryName&gt;** - Needed for signing request, your country (e.g. DE)  
+**&lt;stateOrProvince&gt;** - Needed for signing request, your state (e.g. Hessen)  
+**&lt;localityName&gt;** - Needed for signing request, your city (e.g. Limburg)  
+**&lt;postalCode&gt;** - Needed for signing request, your postal code (e.g 65xxx)  
+**&lt;streetAddress&gt;** - Needed for signing request, your street address (e.g. "xxx xxx")  
+**&lt;organizationName&gt;** - Needed for signing request, your name (e.g. "Jens Hartlep")  
+**&lt;organizationalUnitName&gt;** - Needed for signing request, your OUName (e.g. IT)  
+**&lt;commonName&gt;** - Needed for signing request, your domain.tld (e.g. example.com)  
+**&lt;emailAddress&gt;** - Needed for signing request, your email address (e.g. admin@example.com)  
 **&lt;subjectAltName&gt;** - Needed for singing request, your (sub)domains for the certificate (e.g. DNS:example.com,DNS:www.example.com)
 
 ##### Optional Parameters
@@ -235,14 +226,9 @@ The following ports are allowed by this script
 ## Miscellaneous
 Some links, tools, and sources in arbitrary order for the scripts above...
 
-https://de.ssl-tools.net/
-
-https://thomas-leister.de/
-
-https://blog.kiefer-networks.de/
-
-https://mailcow.email/
-
-https://www.digitalocean.com/community/tutorials
-
-https://letsencrypt.org/howitworks/
+https://de.ssl-tools.net/  
+https://thomas-leister.de/  
+https://blog.kiefer-networks.de/  
+https://mailcow.email/  
+https://www.digitalocean.com/community/tutorials  
+https://letsencrypt.org/howitworks/  
