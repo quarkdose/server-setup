@@ -17,7 +17,7 @@ Here is my collection of setup scripts for my Ubuntu server.
 This script has to be called as user **root**. It will perform a update && (dist)upgrade, install ntp, adds a new user and puts this user into sudoers.d.
 Moreover the ssh root login will be disabled.
 
-#### Usage(#usage)
+#### Usage
 ```bash
 ./01-initial-setup.sh <username> [NOPASSWD]
 ```
