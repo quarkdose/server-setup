@@ -20,7 +20,8 @@ Here is my collection of setup scripts for my Ubuntu server.
   14.  [PHP IMAP Fix](#14---php-imap-fix)
   15.  [Rainloop](#15---rainloop)
   16.  [Docker Remote API](#16---docker-remote-api)
-  17.  [Firewall Settings](#xx---firewall-settings)
+  17.  [Fail2Ban and ufw](#17---fail2ban-and-ufw)
+  18.  [Firewall Settings](#xx---firewall-settings)
 2.  [Miscellaneous](#miscellaneous)
 
 ## Usage
@@ -202,6 +203,14 @@ This script enabled the docker remote API, creates a new user __docker__ for bas
 
 ##### Mandatory Parameters
 **&lt;domain.tld&gt;** - A new subdomain docker.domain.tld will be created
+
+### 17 - Fail2Ban and ufw
+This script changes the fail2ban behavior to use ufw. This script exemplary adds **sshd** to jail.local
+
+#### Usage
+```bash
+./17-fail2ban.sh
+```
 
 ### XX - Firewall Settings
 This script prepares the ufw for some ports and changes the defaults for incoming (deny) and outgoing (allow).
