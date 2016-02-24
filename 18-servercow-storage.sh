@@ -10,7 +10,7 @@ if [[ -z "$2" ]]
         exit
 fi
 
-if [[ "$3" = "ASUSER"]]
+if [[ "$3" = "ASUSER" ]]
         then ASUSER=",uid=$(whoami),gid=$(whoami),file_mode=0640,dir_mode=0750"
         else ASUSER=""
 fi
