@@ -10,6 +10,18 @@ Here is my collection of setup scripts for my Ubuntu server.
   4.  [Docker.io](#04---docker.io)
   5.  [OpenVPN Server](#05---openvpn)
   6.  [OpenVPN Client Certificates](#06---openvpn-client-certificates)
+  7.  [MailCow Prerequisites](#07---mailcow-prerequisites)
+  8.  [nginx Mainline](#08---nginx-mainline)
+  9.  [nginx Let's encrypt](#09---nginx-lets-encrypt)
+  10.  [nginx MailCow](#10---nginx-mailcow)
+  11.  [Postfix Security Fix](#11---postfix-security-fix)
+  12.  [Let's Encrypt](#12---lets-encrypt)
+  13.  [Let's Encrypt Certificates](#13---lets-encrypt-certificates)
+  14.  [PHP IMAP Fix](#14---php-imap-fix)
+  15.  [Rainloop](#15---rainloop)
+  16.  [Docker Remote API](#16---docker-remote-api)
+  17.  [Firewall Settings](#xx---firewall-settings)
+2.  [Miscellaneous](#miscellaneous)
 
 ## Usage
 
@@ -145,14 +157,23 @@ This script creates a Let's Encrypt certificate usable for DANE. The script crea
 
 ##### Mandatory Parameters
 **&lt;countryName&gt;** - Needed for signing request, your country (e.g. DE)
+
 **&lt;stateOrProvince&gt;** - Needed for signing request, your state (e.g. Hessen)
+
 **&lt;localityName&gt;** - Needed for signing request, your city (e.g. Limburg)
-**&lt;postalCode&gt;** - Needed for signing request, your postal code (e.g 65\*\*\*)
-**&lt;streetAddress&gt;** - Needed for signing request, your street address (e.g. "\*\*\* \*\*\*")
+
+**&lt;postalCode&gt;** - Needed for signing request, your postal code (e.g 65xxx)
+
+**&lt;streetAddress&gt;** - Needed for signing request, your street address (e.g. "xxx xxx")
+
 **&lt;organizationName&gt;** - Needed for signing request, your name (e.g. "Jens Hartlep")
+
 **&lt;organizationalUnitName&gt;** - Needed for signing request, your OUName (e.g. IT)
+
 **&lt;commonName&gt;** - Needed for signing request, your domain.tld (e.g. example.com)
+
 **&lt;emailAddress&gt;** - Needed for signing request, your email address (e.g. admin@example.com)
+
 **&lt;subjectAltName&gt;** - Needed for singing request, your (sub)domains for the certificate (e.g. DNS:example.com,DNS:www.example.com)
 
 ##### Optional Parameters
@@ -215,8 +236,13 @@ The following ports are allowed by this script
 Some links, tools, and sources in arbitrary order for the scripts above...
 
 https://de.ssl-tools.net/
+
 https://thomas-leister.de/
+
 https://blog.kiefer-networks.de/
+
 https://mailcow.email/
+
 https://www.digitalocean.com/community/tutorials
+
 https://letsencrypt.org/howitworks/
