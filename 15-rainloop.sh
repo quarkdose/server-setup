@@ -74,7 +74,7 @@ echo "server {
 	include                         /etc/nginx/conf.d/letsencrypt-auth.conf;
 }" | sudo tee /etc/nginx/sites-available/rainloop > /dev/null
 
-sudo ln -s /etc/nginx/sites-available/rainloop /etc/nginx/sites-enabled/003-rainloop
+sudo ln -s /etc/nginx/sites-available/rainloop /etc/nginx/sites-enabled/002-rainloop
 
 sudo nginx -t
 
