@@ -25,5 +25,5 @@ echo '        \/     \/                 \/               \/                     
 sudo apt-get install cifs-utils -y
 sudo mkdir /samba_share
 
-sudo sed -i "\$a //io.servercow.de/home /samba_share cifs username=$1,passwd=$2$ASUSER 0 0"
+sudo sed -i "\$a //io.servercow.de/home /samba_share cifs username=$1,passwd=$2$ASUSER 0 0" /etc/fstab
 sudo mount -a
