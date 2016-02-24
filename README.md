@@ -4,6 +4,8 @@ Here is my collection of setup scripts for my Ubuntu server.
 ## Table of content
 
 1. [Usage](#usage)
+1.1.  [Initial Setup](#initial-setup)
+
 
 ## Usage
 
