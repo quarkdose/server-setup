@@ -46,6 +46,9 @@ echo "server {
 		deny	all;
 		return	404;
 	}
+	location ^~ /data {
+		deny all;
+	}
 	location = /favicon.ico {
 		log_not_found	off;
 		access_log	off;
