@@ -232,3 +232,4 @@ https://blog.kiefer-networks.de/
 https://mailcow.email/  
 https://www.digitalocean.com/community/tutorials  
 https://letsencrypt.org/howitworks/  
+https://www.kernel-error.de/postfix/postfix-dane-tlsa  
