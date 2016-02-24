@@ -63,7 +63,7 @@ server {
         }
 }" | sudo tee /etc/nginx/sites-available/docker.$1 > /dev/null
 
-sudo ln -s /etc/nginx/sites-available/docker.$1 /etc/nginx/sites-enabled/004-docker.$1
+sudo ln -s /etc/nginx/sites-available/docker.$1 /etc/nginx/sites-enabled/003-docker.$1
 sudo nginx -t
 
 sudo ufw allow 4242/tcp
