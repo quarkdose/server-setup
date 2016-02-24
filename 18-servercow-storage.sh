@@ -22,7 +22,7 @@ echo ' /        \  ___/|  | \/\   /\  ___/|  | \/\     \___(  <_> )     /   /   
 echo '/_______  /\___  >__|    \_/  \___  >__|    \______  /\____/ \/\_/   /_______  /|__|  \____/|__|  (____  /\___  / \___  >'
 echo '        \/     \/                 \/               \/                        \/                        \//_____/      \/ '
 
-sudo apt-get install cifs-utils
+sudo apt-get install cifs-utils -y
 sudo mkdir /samba_share
 
 sudo sed -i "\$a //io.servercow.de/home /samba_share cifs username=$1,passwd=$2$ASUSER 0 0"
