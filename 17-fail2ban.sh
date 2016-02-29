@@ -15,4 +15,4 @@ port      = ssh
 filter    = sshd
 logpath   = %(sshd_log)s
 maxretry  = 3
-" | sudo tee -a /etc/fail2ban/jail.conf
+" | sudo tee -a /etc/fail2ban/jail.local
