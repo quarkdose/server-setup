@@ -23,7 +23,8 @@ Here is my collection of setup scripts for my Ubuntu server.
   17.  [Fail2Ban and ufw](#17---fail2ban-and-ufw)
   18.  [ServerCow Storage](#18---servercow-storage)
   19.  [Hastebin](#19---hastebin)
-  20.  [Firewall Settings](#xx---firewall-settings)
+  20.  [Lets Encrypt Renew](#20---lets-encrypt-renew)
+  21.  [Firewall Settings](#xx---firewall-settings)
 2.  [Miscellaneous](#miscellaneous)
 
 ## Usage
@@ -239,6 +240,17 @@ This script creates a hastebin docker container and a nginx server entry for has
 
 ##### Mandatory Parameters
 **&lt;domain.tld&gt;** - A new subdomain paste.domain.tld will be created
+
+### 20- Lets Encrypt Renew
+This script renews the Lets Encrypt Certificates
+
+#### Usage
+```bash
+./20-letsencrypt-renew.sh <mail|domain.tld>
+```
+
+##### Mandatory Parameters
+**&lt;mail|domain.tld&gt;** - mail or the domain for the renewal
 
 ### XX - Firewall Settings
 This script prepares the ufw for some ports and changes the defaults for incoming (deny) and outgoing (allow).
