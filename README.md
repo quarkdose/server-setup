@@ -241,7 +241,7 @@ This script creates a hastebin docker container and a nginx server entry for has
 ##### Mandatory Parameters
 **&lt;domain.tld&gt;** - A new subdomain paste.domain.tld will be created
 
-### 20- Lets Encrypt Renew
+### 20 - Lets Encrypt Renew
 This script renews the Lets Encrypt Certificates
 
 #### Usage
