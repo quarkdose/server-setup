@@ -283,5 +283,5 @@ https://www.digitalocean.com/community/tutorials
 https://letsencrypt.org/howitworks/  
 https://www.kernel-error.de/postfix/postfix-dane-tlsa  
 https://www.ssllabs.com/ssltest/index.html  
-http://www.spf-record.de/
 https://dns.watch/index
+http://www.spf-record.de/
